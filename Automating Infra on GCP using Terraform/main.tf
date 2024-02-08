@@ -3,7 +3,7 @@
 #############
 
 module "compute_instance_1" {
-  source  = "terraform-google-modules/vm/google//modules/compute_instance"
+  source  = "/modules/instances/compute_instance"
   version = "~> 10.0"
 
   region            = var.region
@@ -13,7 +13,7 @@ module "compute_instance_1" {
 }
 
 module "compute_instance_2" {
-  source  = "terraform-google-modules/vm/google//modules/compute_instance"
+  source  = "/modules/instances/compute_instance"
   version = "~> 10.0"
 
   region            = var.region
