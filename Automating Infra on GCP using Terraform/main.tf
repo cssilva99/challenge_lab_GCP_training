@@ -1,5 +1,6 @@
 ##########################################################################################
-# ChatGPT says that 2 Terraform Modules within the same file cannot have the same name
+  ChatGPT says that 2 Terraform Modules within the same file cannot have the same name
+  IT IS NOT NECESSARY TO INDICATE 
 ##########################################################################################
 
 module "compute_instance_1" {
