@@ -1,23 +1,25 @@
 #############
-# Instances
+# Modules
 #############
 
-resource "google_compute_instance_from_template" "tf-instance-1" {
-  name                = var.name
-  type                = var.type
-  region              = var.region
-  zone                = var.zone 
-  project             = var.project_id
-  //permissions
-  //configuration
+module "compute_instance_1" {
+  source  = "terraform-google-modules/vm/google//modules/compute_instance"
+  version = "~> 10.0"
+
+  region            = var.region
+  subnetwork        = var.subnetwork
+  num_instances     = 1
+  hostname          = "tf-instance-1"
+  instance_template = module.instance_template.self_link
 }
 
-resource "google_compute_instance_from_template" "tf-instance-2" {
-  name                = var.name
-  type                = var.type
-  region              = var.region
-  zone                = var.zone 
-  project             = var.project_id
-  //permissions
-  //configuration
+module "compute_instance_2" {
+  source  = "terraform-google-modules/vm/google//modules/compute_instance"
+  version = "~> 10.0"
+
+  region            = var.region
+  subnetwork        = var.subnetwork
+  num_instances     = 1
+  hostname          = "tf-instance-1"
+  instance_template = module.instance_template.self_link
 }
