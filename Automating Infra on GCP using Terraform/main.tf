@@ -1,7 +1,7 @@
-##########################################################################################
+######################################################################################################
   ChatGPT says that 2 Terraform Modules within the same file cannot have the same name
-  IT IS NOT NECESSARY TO INDICATE 
-##########################################################################################
+  IT IS NOT NECESSARY TO INDICATE the instance.tf file in the source. Just the folder is enough
+######################################################################################################
 
 module "compute_instance_1" {
   source  = "./modules/instances/tf-instance-1"
