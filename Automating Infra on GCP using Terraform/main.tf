@@ -3,7 +3,7 @@
 #############
 
 module "compute_instance_1" {
-  source  = "/modules/instances/compute_instance"
+  source  = "/modules/instances/tf-instance-1"
   version = "~> 10.0"
 
   region            = var.region
@@ -13,7 +13,7 @@ module "compute_instance_1" {
 }
 
 module "compute_instance_2" {
-  source  = "/modules/instances/compute_instance"
+  source  = "/modules/instances/tf-instance-2"
   version = "~> 10.0"
 
   region            = var.region
