@@ -5,8 +5,6 @@
 
 module "compute_instance_1" {
   source  = "./modules/instances/tf-instance-1"
-  version = "~> 10.0"
-
   region            = var.region
   num_instances     = 1
   hostname          = "tf-instance-1"
@@ -15,8 +13,6 @@ module "compute_instance_1" {
 
 module "compute_instance_2" {
   source  = "./modules/instances/tf-instance-2"
-  version = "~> 10.0"
-
   region            = var.region
   num_instances     = 1
   hostname          = "tf-instance-2"
