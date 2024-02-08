@@ -7,7 +7,6 @@ module "compute_instance_1" {
   version = "~> 10.0"
 
   region            = var.region
-  subnetwork        = var.subnetwork
   num_instances     = 1
   hostname          = "tf-instance-1"
   instance_template = module.instance_template.self_link
@@ -18,8 +17,7 @@ module "compute_instance_2" {
   version = "~> 10.0"
 
   region            = var.region
-  subnetwork        = var.subnetwork
   num_instances     = 1
-  hostname          = "tf-instance-1"
+  hostname          = "tf-instance-2"
   instance_template = module.instance_template.self_link
 }
