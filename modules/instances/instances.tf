@@ -3,7 +3,7 @@
 #############
 
 resource "google_compute_instance_from_template" "tf-instance-1" {
-  name                = var.name
+  name                = "tf-instance-1"
   type                = var.type
   region              = var.region
   zone                = var.zone 
@@ -13,7 +13,7 @@ resource "google_compute_instance_from_template" "tf-instance-1" {
 }
 
 resource "google_compute_instance_from_template" "tf-instance-2" {
-  name                = var.name
+  name                = "tf-instance-2"
   type                = var.type
   region              = var.region
   zone                = var.zone 
