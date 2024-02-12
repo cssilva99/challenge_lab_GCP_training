@@ -6,13 +6,11 @@
 module "compute_instance_1" {
   source  = "./modules/instances/"
   region            = var.region
-  hostname          = "tf-instance-1"
   instance_template = module.instance_template.self_link
 }
 
 module "compute_instance_2" {
   source  = "./modules/instances/"
   region            = var.region
-  hostname          = "tf-instance-2"
   instance_template = module.instance_template.self_link
 }
