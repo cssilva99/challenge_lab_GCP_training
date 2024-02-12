@@ -7,10 +7,7 @@ resource "google_compute_instance_from_template" "tf-instance-1" {
   //region              = "us-west1"
   //zone                = var.zone 
   project             = var.project_id
-  disk {
-    source_image      = "debian-cloud/debian-11"
-    auto_delete       = true
-  }
+  source_instance_template = google_compute_instance_template.tpl.self_link_unique
 }
 
 resource "google_compute_instance_from_template" "tf-instance-2" {
@@ -18,8 +15,5 @@ resource "google_compute_instance_from_template" "tf-instance-2" {
   //region              = "us-west1"
   //zone                = var.zone 
   project             = var.project_id
-  disk {
-    source_image      = "debian-cloud/debian-11"
-    auto_delete       = true
-  }
+  source_instance_template = google_compute_instance_template.tpl.self_link_unique
 }
