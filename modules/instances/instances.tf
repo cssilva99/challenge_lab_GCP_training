@@ -7,7 +7,7 @@ resource "google_compute_instance_from_template" "tf-instance-1" {
   //region              = "us-west1"
   //zone                = var.zone 
   project             = var.project_id
-  source_instance_template = google_compute_instance_template.tpl.self_link_unique
+  source_instance_template = "instance-template-20240212-122428"
 }
 
 resource "google_compute_instance_from_template" "tf-instance-2" {
@@ -15,5 +15,5 @@ resource "google_compute_instance_from_template" "tf-instance-2" {
   //region              = "us-west1"
   //zone                = var.zone 
   project             = var.project_id
-  source_instance_template = google_compute_instance_template.tpl.self_link_unique
+  source_instance_template = "instance-template-20240212-122428"
 }
