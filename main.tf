@@ -18,3 +18,4 @@ module "compute_instance_2" {
   source  = "./modules/instances/"
   region            = var.region
   instance_template = modules.instances
+}
