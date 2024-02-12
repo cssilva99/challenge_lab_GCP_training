@@ -11,11 +11,11 @@ provider "google" {
 module "compute_instance_1" {
   source  = "./modules/instances/"
   region            = var.region
-  instance_template = modules.instances
+  # instance_template = modules.instances
 }
 
 module "compute_instance_2" {
   source  = "./modules/instances/"
   region            = var.region
-  instance_template = modules.instances
+  # instance_template = modules.instances
 }
