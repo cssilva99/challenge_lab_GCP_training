@@ -6,11 +6,10 @@
 module "compute_instance_1" {
   source  = "./modules/instances/"
   region            = var.region
-  instance_template = module.instance_template.self_link
+  instance_template = modules.instances
 }
 
 module "compute_instance_2" {
   source  = "./modules/instances/"
   region            = var.region
-  instance_template = module.instance_template.self_link
-}
+  instance_template = modules.instances
